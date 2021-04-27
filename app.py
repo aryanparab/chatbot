@@ -67,9 +67,9 @@ def index():
 #function for the bot response
 def get_bot_response():
   userText = request.args.get('msg')
-  print(userText)
+  
   userText = str(userText)
-  print(userText)
+
   ints = predict_class(userText)
   res = get_response(ints, intents)
   print(res,userText)
@@ -78,5 +78,5 @@ def get_bot_response():
 #    return str(englishBot.get_response(userText))
 
 if __name__ == "__main__":
-	print(type(classes))
-	app.run(debug=True)
+	#print(type(classes))
+	app.run(debug=False)
